@@ -1,0 +1,8 @@
+
+.idea
+package-lock.json
+node_modules
+/build
+
+.loki/report.html
+.loki/report.json
