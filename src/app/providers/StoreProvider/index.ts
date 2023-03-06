@@ -1,5 +1,4 @@
 import type {
-  ReduxStoreWithManager,
   StateSchema,
   ThunkConfig,
   ThunkExtraArg,
