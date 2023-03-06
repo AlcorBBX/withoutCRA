@@ -14,5 +14,6 @@ export const BugButton = ({ className }: BugButtonProps) => {
       throw new Error()
     }
   }, [error])
+  //i18next/no-literal-string
   return <Button onClick={onThrow}>throw error</Button>
 }

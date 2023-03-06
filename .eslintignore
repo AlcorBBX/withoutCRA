@@ -4,3 +4,5 @@ build
 coverage
 ./dist
 jest
+
+.webpack.config.ts
