@@ -1,7 +1,7 @@
 import { DeepPartial, ReducersMapObject } from '@reduxjs/toolkit'
 import { Story } from '@storybook/react'
 
-import { StateSchema, StoreProvider } from 'app/providers/router/StoreProvider'
+import { StateSchema, StoreProvider } from 'app/providers/StoreProvider'
 
 import { profileReducer } from 'entities/Profile/index'
 
