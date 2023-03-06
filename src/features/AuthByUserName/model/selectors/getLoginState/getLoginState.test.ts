@@ -11,14 +11,14 @@ describe('getLoginState.test', () => {
         username: 'Oleg',
         password: '123',
         isLoading: true,
-        error: 'error'
-      }
+        error: 'error',
+      },
     }
     expect(getLoginState(state as StateSchema)).toEqual({
       username: 'Oleg',
       password: '123',
       isLoading: true,
-      error: 'error'
+      error: 'error',
     })
     expect(getLoginState(state as StateSchema).username).toEqual('Oleg')
     expect(getLoginState(state as StateSchema).password).toEqual('123')
@@ -31,7 +31,7 @@ describe('getLoginState.test', () => {
     expect(getLoginState(state as StateSchema)).toEqual({
       username: '',
       password: '',
-      isLoading: false
+      isLoading: false,
     })
   })
 })

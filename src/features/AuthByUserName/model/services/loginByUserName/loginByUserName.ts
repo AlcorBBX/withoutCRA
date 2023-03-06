@@ -19,7 +19,7 @@ export const loginByUserName = createAsyncThunk<
   try {
     const res = await extra.api.post<User>('/login', {
       username,
-      password
+      password,
     })
     if (!res.data) {
       throw new Error()

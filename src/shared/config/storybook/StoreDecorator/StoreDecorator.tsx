@@ -9,13 +9,13 @@ import { loginReducer } from 'features/AuthByUserName'
 
 const defaultAsyncReducers: DeepPartial<ReducersMapObject<StateSchema>> = {
   loginForm: loginReducer,
-  profile: profileReducer
+  profile: profileReducer,
 }
 
 export const StoreDecorator =
   (
     state: DeepPartial<StateSchema>,
-    asyncReducers?: DeepPartial<ReducersMapObject<StateSchema>>
+    asyncReducers?: DeepPartial<ReducersMapObject<StateSchema>>,
   ) =>
   (StoryComponent: Story) => {
     return (

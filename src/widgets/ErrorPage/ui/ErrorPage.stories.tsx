@@ -14,8 +14,8 @@ export default {
   component: ErrorPage,
 
   argTypes: {
-    backgroundColor: { control: 'color' }
-  }
+    backgroundColor: { control: 'color' },
+  },
 } as ComponentMeta<typeof ErrorPage>
 
 const Template: ComponentStory<typeof ErrorPage> = (args) => (

@@ -5,18 +5,18 @@ import { useTranslation } from 'react-i18next'
 import {
   ProfileCard,
   fetchProfileData,
-  profileReducer
+  profileReducer,
 } from 'entities/Profile/index'
 
 import { classNames } from 'shared/lib/classNames/classNames'
 import {
   DynamicModuleLoader,
-  ReducersList
+  ReducersList,
 } from 'shared/lib/components/DynamicModuleLoader/DynamicModuleLoader'
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch'
 
 const reducers: ReducersList = {
-  profile: profileReducer
+  profile: profileReducer,
 }
 
 interface profilePageProps {

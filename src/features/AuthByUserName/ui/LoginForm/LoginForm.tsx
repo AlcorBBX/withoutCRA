@@ -6,7 +6,7 @@ import { useSelector } from 'react-redux'
 import { classNames } from 'shared/lib/classNames/classNames'
 import {
   DynamicModuleLoader,
-  ReducersList
+  ReducersList,
 } from 'shared/lib/components/DynamicModuleLoader/DynamicModuleLoader'
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch'
 import { Button, ButtonTheme } from 'shared/ui/Button/Button'
@@ -24,7 +24,7 @@ export interface LoginFormProps {
 }
 
 const initialReducers: ReducersList = {
-  loginForm: loginReducer
+  loginForm: loginReducer,
 }
 
 const LoginForm = memo(({ className, onSuccess }: LoginFormProps) => {
@@ -36,14 +36,14 @@ const LoginForm = memo(({ className, onSuccess }: LoginFormProps) => {
     (value: string) => {
       dispatch(loginActions.setUserName(value))
     },
-    [dispatch]
+    [dispatch],
   )
 
   const onChangePassword = useCallback(
     (value: string) => {
       dispatch(loginActions.setPassword(value))
     },
-    [dispatch]
+    [dispatch],
   )
 
   const onLoginClick = useCallback(async () => {

@@ -5,7 +5,7 @@ import {
   memo,
   useEffect,
   useRef,
-  useState
+  useState,
 } from 'react'
 
 import { classNames } from 'shared/lib/classNames/classNames'
@@ -97,5 +97,5 @@ export const Input: FC<InputProps> = memo(
         </div>
       </div>
     )
-  }
+  },
 )

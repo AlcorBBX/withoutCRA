@@ -5,7 +5,7 @@ import { useDispatch, useStore } from 'react-redux'
 
 import {
   ReduxStoreWithManager,
-  StateSchemaKey
+  StateSchemaKey,
 } from 'app/providers/StoreProvider/config/StateSchema'
 
 export type ReducersList = {
@@ -35,7 +35,7 @@ export const DynamicModuleLoader: FC<DynamicModuleLoaderProps> = (props) => {
           ([name, reducer]: ReducersListEntry) => {
             store.reducerManager.remove(name)
             dispatch({ type: `@DESTROY remove ${name} reducer` })
-          }
+          },
         )
       }
     }

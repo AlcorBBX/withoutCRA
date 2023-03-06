@@ -16,7 +16,7 @@ export interface componentRenderOptions {
 
 export const componentRender = (
   component: ReactNode,
-  options: componentRenderOptions = {}
+  options: componentRenderOptions = {},
 ) => {
   const { route = '/', initialState } = options
   return render(
@@ -24,6 +24,6 @@ export const componentRender = (
       <MemoryRouter initialEntries={[route]}>
         <I18nextProvider i18n={i18nForTests}>{component}</I18nextProvider>
       </MemoryRouter>
-    </StoreProvider>
+    </StoreProvider>,
   )
 }

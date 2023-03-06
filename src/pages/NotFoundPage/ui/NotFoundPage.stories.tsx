@@ -12,8 +12,8 @@ export default {
   component: NotFoundPage,
 
   argTypes: {
-    backgroundColor: { control: 'color' }
-  }
+    backgroundColor: { control: 'color' },
+  },
 } as ComponentMeta<typeof NotFoundPage>
 
 const Template: ComponentStory<typeof NotFoundPage> = (args) => (

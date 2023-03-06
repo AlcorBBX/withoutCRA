@@ -12,8 +12,8 @@ export default {
   component: Sidebar,
 
   argTypes: {
-    backgroundColor: { control: 'color' }
-  }
+    backgroundColor: { control: 'color' },
+  },
 } as ComponentMeta<typeof Sidebar>
 
 const Template: ComponentStory<typeof Sidebar> = (args) => <Sidebar {...args} />

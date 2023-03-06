@@ -7,9 +7,9 @@ i18n.use(initReactI18next).init({
   debug: false,
 
   interpolation: {
-    escapeValue: false
+    escapeValue: false,
   },
-  resources: { ru: { translations: {} } }
+  resources: { ru: { translations: {} } },
 })
 
 export default i18n

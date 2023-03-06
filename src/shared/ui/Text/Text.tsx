@@ -6,7 +6,7 @@ import cls from './Text.module.scss'
 
 export enum TextTheme {
   PRIMARY = 'primary',
-  ERROR = 'error'
+  ERROR = 'error',
 }
 
 interface TextProps {
@@ -17,14 +17,10 @@ interface TextProps {
 }
 
 export const Text = memo(
-  ({ className, title, text, theme = TextTheme.PRIMARY }: TextProps) => {
-    return (
-      <div
-        className={classNames(cls.text, { [cls[theme]]: true }, [className])}
-      >
-        {title && <p className={cls.title}>{title}</p>}
-        {text && <p className={cls.text}>{text}</p>}
-      </div>
-    )
-  }
+  ({ className, title, text, theme = TextTheme.PRIMARY }: TextProps) => (
+    <div className={classNames(cls.text, { [cls[theme]]: true }, [className])}>
+      {title && <p className={cls.title}>{title}</p>}
+      {text && <p className={cls.text}>{text}</p>}
+    </div>
+  ),
 )

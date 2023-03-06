@@ -22,7 +22,7 @@ export const Modal = ({
   children,
   isOpen,
   onClose,
-  lazy
+  lazy,
 }: ModalProps) => {
   const [isClosing, setIsClosing] = useState(false)
   const [isMounted, setIsMounted] = useState(false)
@@ -38,7 +38,7 @@ export const Modal = ({
 
   const mods: Record<string, boolean> = {
     [cls.opened]: isOpen,
-    [cls.isClosing]: isClosing
+    [cls.isClosing]: isClosing,
   }
 
   const closeHandler = useCallback(() => {
@@ -57,7 +57,7 @@ export const Modal = ({
         closeHandler()
       }
     },
-    [closeHandler]
+    [closeHandler],
   )
 
   const onContentClick = (e: React.MouseEvent) => {
