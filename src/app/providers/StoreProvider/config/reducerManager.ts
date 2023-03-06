@@ -2,13 +2,13 @@ import {
   AnyAction,
   Reducer,
   ReducersMapObject,
-  combineReducers
+  combineReducers,
 } from '@reduxjs/toolkit'
 
 import { ReducerManager, StateSchema, StateSchemaKey } from './StateSchema'
 
 export function createReducerManager(
-  initialReducers: ReducersMapObject<StateSchema>
+  initialReducers: ReducersMapObject<StateSchema>,
 ): ReducerManager {
   const reducers = { ...initialReducers }
 
@@ -46,6 +46,6 @@ export function createReducerManager(
       delete reducers[key]
       keysToRemove.push(key)
       combinedReducer = combineReducers(reducers)
-    }
+    },
   }
 }

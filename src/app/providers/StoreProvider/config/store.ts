@@ -12,12 +12,12 @@ import { createReducerManager } from './reducerManager'
 export function createReduxStore(
   initialState?: StateSchema,
   asyncReducers?: ReducersMapObject,
-  navigate?: (to: To, options?: NavigateOptions) => void
+  navigate?: (to: To, options?: NavigateOptions) => void,
 ) {
   const rootReducers: ReducersMapObject<StateSchema> = {
     ...asyncReducers,
     counter: counterReducer,
-    user: userReducer
+    user: userReducer,
   }
 
   const reducerManager = createReducerManager(rootReducers)
@@ -32,10 +32,10 @@ export function createReduxStore(
         thunk: {
           extraArgument: {
             api: $api,
-            navigate
-          }
-        }
-      })
+            navigate,
+          },
+        },
+      }),
   })
   //todo fix types
   //@ts-ignore

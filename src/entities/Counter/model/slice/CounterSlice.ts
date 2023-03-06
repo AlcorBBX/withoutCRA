@@ -13,8 +13,8 @@ const counterSlice = createSlice({
     },
     decrement(state) {
       state.value--
-    }
-  }
+    },
+  },
 })
 
 export const { actions: counterActions } = counterSlice
